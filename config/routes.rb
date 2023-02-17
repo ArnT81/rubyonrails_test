@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   # USERS
   get 'sign_up' => 'registration#new'
   post 'sign_up' => 'registration#create'
+
+  get 'sign_in' => 'sessions#new'
+  post 'sign_in' => 'sessions#create'
+  
   delete 'logout' => 'sessions#destroy'
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
