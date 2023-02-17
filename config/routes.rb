@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   get 'about' => 'about#index'
   get 'users' => 'users#index'
   
+  # USERS
   get 'sign_up' => 'registration#new'
   post 'sign_up' => 'registration#create'
+  delete 'logout' => 'sessions#destroy'
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end
