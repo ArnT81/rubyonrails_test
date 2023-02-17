@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+  resources :users
   resources :cats
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  #!root is different
-
+  
   root 'home#index'
   get 'about' => 'about#index'
-
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get 'users' => 'users#index'
+  
+  get 'sign_up' => 'registration#new'
+  post 'sign_up' => 'registration#create'
+  
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end
