@@ -12,8 +12,10 @@ Rails.application.routes.draw do
 
   get 'sign_in' => 'sessions#new'
   post 'sign_in' => 'sessions#create'
-  
   delete 'logout' => 'sessions#destroy'
-  
+
+  get 'password', to: 'password#edit', as: :edit_password
+  patch 'password' => 'password#update'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end
